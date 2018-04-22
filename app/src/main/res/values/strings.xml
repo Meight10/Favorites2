@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Solar Sys</string>
+    <string name="app_name">Solar System</string>
 
     <!--Tab strings-->
     <string name="tab1">PLANETS</string>
@@ -15,6 +15,5 @@
     <string name="saturn">Saturn</string>
     <string name="uranus">Uranus</string>
     <string name="neptune">Neptune</string>
-    <string name="solar_system_name">Solar System</string>
 
 </resources>

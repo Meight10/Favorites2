@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sistema Solar</string>
+    <string name="tab1">PLANETAS</string>
+    <string name="tab2">PLANETAS FAV</string>
+    <string name="sun">Sol</string>
+    <string name="mercury">Mercurio</string>
+    <string name="venus">Venus</string>
+    <string name="earth">Tierra</string>
+    <string name="mars">Marte</string>
+    <string name="jupiter">Jupiter</string>
+    <string name="saturn">Saturno</string>
+    <string name="uranus">Urano</string>
+    <string name="neptune">Neptuno</string>
+</resources>
