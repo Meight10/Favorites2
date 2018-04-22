@@ -36,7 +36,7 @@ public class PlanetFragment extends Fragment {
         View view = inflater.inflate(R.layout.planet_fragment, container, false);
         ButterKnife.bind(this, view);
         vp = getActivity().findViewById(R.id.viewpager);
-        PlanetAdapter adapter = new PlanetAdapter(MainActivity.planetArrayList, vp);
+        PlanetAdapter adapter = new PlanetAdapter(vp);
         recyclerView.setAdapter(adapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
