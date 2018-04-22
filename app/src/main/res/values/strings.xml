@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Solar Sys</string>
+
+    <!--Tab strings-->
+    <string name="tab1">PLANETS</string>
+    <string name="tab2">FAV PLANETS</string>
+
+    <!--Planets strings-->
+    <string name="sun">Sun</string>
+    <string name="mercury">Mercury</string>
+    <string name="venus">Venus</string>
+    <string name="earth">Earth</string>
+    <string name="mars">Mars</string>
+    <string name="jupiter">Jupiter</string>
+    <string name="saturn">Saturn</string>
+    <string name="uranus">Uranus</string>
+    <string name="neptune">Neptune</string>
+    <string name="solar_system_name">Solar System</string>
+
 </resources>
