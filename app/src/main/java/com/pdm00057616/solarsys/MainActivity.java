@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.LinearLayout;
 
 import com.pdm00057616.solarsys.adapters.ViewPagerAdapter;
 import com.pdm00057616.solarsys.fragments.FavPlanetFragment;
@@ -24,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     @BindView(R.id.viewpager)
     ViewPager viewPager;
-
+    @BindView(R.id.linearLayoutSnackbarPlanet)
+    LinearLayout linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

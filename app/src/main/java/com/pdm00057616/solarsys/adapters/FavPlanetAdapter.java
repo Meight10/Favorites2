@@ -2,6 +2,7 @@ package com.pdm00057616.solarsys.adapters;
 
 import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.pdm00057616.solarsys.MainActivity;
@@ -24,10 +26,12 @@ public class FavPlanetAdapter extends RecyclerView.Adapter<FavPlanetAdapter.View
 
     private ViewPager vp;
     private ArrayList<Planet> planetArrayList;
+    private LinearLayout linearLayout;
 
-    public FavPlanetAdapter(ArrayList<Planet> planetArrayList, ViewPager vp) {
+    public FavPlanetAdapter(ArrayList<Planet> planetArrayList, ViewPager vp, LinearLayout linearLayout) {
         this.planetArrayList = planetArrayList;
         this.vp = vp;
+        this.linearLayout=linearLayout;
     }
 
     @NonNull
@@ -50,6 +54,7 @@ public class FavPlanetAdapter extends RecyclerView.Adapter<FavPlanetAdapter.View
             public void onClick(View v) {
                 holder.fav.setImageResource(R.drawable.star_deselected);
                 planetArrayList.get(position).setFav(false);
+                Snackbar.make(linearLayout, vp.getContext().getText(MainActivity.planetsFav.get(position).getTitle())+" "+vp.getContext().getText(R.string.removed), Snackbar.LENGTH_SHORT).show();
                 MainActivity.planetsFav.remove(planetArrayList.get(position));
                 vp.getAdapter().notifyDataSetChanged();
             }

@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.pdm00057616.solarsys.MainActivity;
 import com.pdm00057616.solarsys.R;
@@ -21,6 +22,7 @@ import butterknife.ButterKnife;
 public class FavPlanetFragment extends Fragment {
 
     private ViewPager vp;
+    private LinearLayout linearLayout;
 
     @BindView(R.id.recyclerviewFav)
     RecyclerView recyclerView;
@@ -35,7 +37,8 @@ public class FavPlanetFragment extends Fragment {
         View view = inflater.inflate(R.layout.fav_planet_fragment, container, false);
         ButterKnife.bind(this, view);
         vp = getActivity().findViewById(R.id.viewpager);
-        FavPlanetAdapter adapter = new FavPlanetAdapter(MainActivity.planetsFav, vp);
+        linearLayout=getActivity().findViewById(R.id.linearLayoutSnackbarPlanet);
+        FavPlanetAdapter adapter = new FavPlanetAdapter(MainActivity.planetsFav, vp, linearLayout);
         recyclerView.setAdapter(adapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
