@@ -16,4 +16,8 @@
     <string name="uranus">Uranus</string>
     <string name="neptune">Neptune</string>
 
+    <!--snackbar text-->
+    <string name="added">added to favorites</string>
+    <string name="removed">removed from favorites</string>
+
 </resources>

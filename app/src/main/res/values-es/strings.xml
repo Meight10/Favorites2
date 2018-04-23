@@ -12,4 +12,9 @@
     <string name="saturn">Saturno</string>
     <string name="uranus">Urano</string>
     <string name="neptune">Neptuno</string>
+
+    <!--snackbar text-->
+    <string name="added">agregado a favoritos</string>
+    <string name="removed">removido de favoritos</string>
+
 </resources>
