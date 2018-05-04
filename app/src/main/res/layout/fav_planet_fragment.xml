@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.example.uca.favoritescharacters.List_Fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recyclerviewFav"
+    app:layoutManager="LinearLayoutManager"
+    tools:context="com.pdm00057616.solarsys.MainActivity"
+    tools:listitem="@layout/cardview_layout" />
+
+<!--<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -11,4 +23,4 @@
 
     </android.support.v7.widget.RecyclerView>
 
-</LinearLayout>
+</LinearLayout>-->

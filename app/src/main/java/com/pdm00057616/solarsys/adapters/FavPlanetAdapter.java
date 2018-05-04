@@ -26,12 +26,12 @@ public class FavPlanetAdapter extends RecyclerView.Adapter<FavPlanetAdapter.View
 
     private ViewPager vp;
     private ArrayList<Planet> planetArrayList;
-    private LinearLayout linearLayout;
+    //private LinearLayout linearLayout;
 
-    public FavPlanetAdapter(ArrayList<Planet> planetArrayList, ViewPager vp, LinearLayout linearLayout) {
+    public FavPlanetAdapter(ArrayList<Planet> planetArrayList, ViewPager vp) {
         this.planetArrayList = planetArrayList;
         this.vp = vp;
-        this.linearLayout=linearLayout;
+        //this.linearLayout=linearLayout;
     }
 
     @NonNull
@@ -54,7 +54,7 @@ public class FavPlanetAdapter extends RecyclerView.Adapter<FavPlanetAdapter.View
             public void onClick(View v) {
                 holder.fav.setImageResource(R.drawable.star_deselected);
                 planetArrayList.get(position).setFav(false);
-                Snackbar.make(linearLayout, vp.getContext().getText(MainActivity.planetsFav.get(position).getTitle())+" "+vp.getContext().getText(R.string.removed), Snackbar.LENGTH_SHORT).show();
+                //Snackbar.make(linearLayout, vp.getContext().getText(MainActivity.planetsFav.get(position).getTitle())+" "+vp.getContext().getText(R.string.removed), Snackbar.LENGTH_SHORT).show();
                 MainActivity.planetsFav.remove(planetArrayList.get(position));
                 vp.getAdapter().notifyDataSetChanged();
             }

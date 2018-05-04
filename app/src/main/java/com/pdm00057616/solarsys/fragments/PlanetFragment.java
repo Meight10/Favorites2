@@ -1,5 +1,6 @@
 package com.pdm00057616.solarsys.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -24,8 +25,7 @@ public class PlanetFragment extends Fragment {
     private ViewPager vp;
     private LinearLayout linearLayout;
 
-    @BindView(R.id.recyclerviewPlanet)
-    RecyclerView recyclerView;
+
 
     public PlanetFragment() {
     }
@@ -35,14 +35,12 @@ public class PlanetFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.planet_fragment, container, false);
-        ButterKnife.bind(this, view);
-        linearLayout=getActivity().findViewById(R.id.linearLayoutSnackbarPlanet);
-        System.out.println(linearLayout);
-        vp=getActivity().findViewById(R.id.viewpager);
-        PlanetAdapter adapter = new PlanetAdapter(vp, linearLayout);
+        Context ctx = view.getContext();
+        RecyclerView recyclerView = (RecyclerView)view;
+        recyclerView.setLayoutManager(new LinearLayoutManager(ctx));
+        vp = (ViewPager)getActivity().findViewById(R.id.viewpager);
+        PlanetAdapter adapter= new PlanetAdapter(vp);
         recyclerView.setAdapter(adapter);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
         return view;
     }
 
